@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import ListingCard from './components/ListingCard';
+import Navbar from './components/NavBar';
 
 const dummyListings = [
   {
@@ -10,6 +11,7 @@ const dummyListings = [
     price: 1100,
     available_from: '2025-08-01',
     location: 'Newark, DE',
+    owner: 'John Doe',
     sublet: true,
     url: 'https://example.com/listing1',
   },
@@ -19,6 +21,7 @@ const dummyListings = [
     price: 875,
     available_from: '2025-07-15',
     location: 'Newark, DE',
+    owner: 'Jane Smith',
     sublet: false,
     url: 'https://example.com/listing2',
   },
@@ -41,6 +44,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <header className="app-header">
         <h1>BlueHenHomes</h1>
         <p>Find off-campus housing in Newark, DE</p>
